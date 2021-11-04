@@ -2,6 +2,7 @@
 
 public class Report {
 
+    //variables for the data of the report
     String EstablishmentName = "no name";
     String Address = " no address";
     String date = " no date";
@@ -12,6 +13,7 @@ public class Report {
     boolean evidence = false; //meaning no pictures yet
 
 
+    //constructor for the report class
     public Report () {
         this.EstablishmentName = EstablishmentName;
         this.Address = Address;

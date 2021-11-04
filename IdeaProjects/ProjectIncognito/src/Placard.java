@@ -5,6 +5,7 @@ public class Placard extends Report{
     //method to choose the set the color of the placard on the provided report.
     public String Placard (Report aReport) {
 
+        //variable for the color of the placard
         String color;
 
         //green is passing 85 or more...
