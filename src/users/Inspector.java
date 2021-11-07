@@ -7,10 +7,18 @@ public class Inspector extends User {
     private String role = "Inspector";
     private String establishment;
 
-    public int rateEstablishment(int rate) {
-        return rate;
+    /**
+     * Inspector will be able to rate the Establishment
+     * @param rate rate the Establishment out of 5
+     *
+     */
+    public void rateEstablishment(int rate) {
+
     }
 
+    /**
+     * Inspectors will be able to conduct an Inspection using the Inspection class.
+     */
     public void Inspection() {
 
     }
