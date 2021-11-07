@@ -2,6 +2,9 @@ package users;
 
 import java.util.*;
 
+/**
+ * Inspector class that extends from User.
+ */
 public class Inspector extends User {
     private String name;
     private String role = "Inspector";

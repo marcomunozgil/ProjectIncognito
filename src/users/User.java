@@ -1,5 +1,8 @@
 package users;
 
+/**
+ * User class. Currently what most users will be defined as for Project Incognito.
+ */
 public class User {
     private String name;
     private String role = "User";
