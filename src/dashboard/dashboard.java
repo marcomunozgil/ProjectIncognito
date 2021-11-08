@@ -32,8 +32,8 @@ public class Dashboard {
             cameraT.setBounds(25, 25,350, 300);
         }
 
-        dashboardUI bar = new UIBar(725, 60 ,25, 150);
-        dashboardUI bar2 = new UIBar(755, 60 ,25, 150);
+        dashboardUI bar = new dashboardUI(725, 60 ,25, 150);
+        dashboardUI bar2 = new dashboardUI(755, 60 ,25, 150);
 
         UIGraph gp = new UIGraph(100,400,300,150);
         p.add(bar);
