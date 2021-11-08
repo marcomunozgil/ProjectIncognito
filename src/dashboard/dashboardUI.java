@@ -9,7 +9,7 @@ public class dashboardUI extends JPanel implements UIObj  {
 
     int x,y,w,h;
 
-    public BasicUIObject(int x, int y, int w, int h){
+    public dashboardUI(int x, int y, int w, int h){
         this.x = x;
         this.y = y;
         this.h = h;
