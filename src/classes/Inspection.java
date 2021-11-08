@@ -1,3 +1,5 @@
+package ProjectIncognito.src.classes;
+
 import java.util.*;
 public class Inspection {
     private String name;
@@ -34,12 +36,4 @@ public class Inspection {
     {
 
     }
-}
-class Report
-{
-
-}
-class Placard
-{
-
 }

@@ -41,7 +41,7 @@ public class dashboard {
         scoreLabel.setBounds(10, 140, 80, 25);
         panel.add(scoreLabel);
 
-        placardLabel = new JLabel("Placard");
+        placardLabel = new JLabel("ProjectIncognito.src.inspections.Placard");
         placardLabel.setBounds(10, 170, 80, 25);
         panel.add(placardLabel);
 
