@@ -1,75 +1,54 @@
-import java.awt.Color;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Random;
+import javax.swing.*;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+public class dashboard {
+    private static JLabel label;
+    private static JLabel homeLabel;
+    private static JLabel reportLabel;
+    private static JLabel operationLabel;
+    private static JLabel scoreLabel;
+    private static JLabel placardLabel;
 
-public class Dashboard {
+    private static JButton logout;
+    //private static JLabel failed;
 
-    JFrame f = new JFrame("Dashboard");
-    JPanel p = new JPanel();
-    JPanel cameraT = new JPanel();
+    public static void main(String[] args) {
+        JPanel panel = new JPanel();
+        JFrame frame = new JFrame();
+        frame.setSize(500, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.add(panel);
 
-    private static final String ip = "localhost";
-    private static final String port = "7777";
+        panel.setLayout(null);
 
-    public static double data = 0;
-    public static void main(String args[]){
-        new Dashboard().start();
+        label = new JLabel("Username");
+        label.setBounds(10, 20, 80, 25);
+        panel.add(label);
+
+        homeLabel = new JLabel("Home");
+        homeLabel.setBounds(10, 50, 80, 25);
+        panel.add(homeLabel);
+
+        reportLabel = new JLabel("Reports");
+        reportLabel.setBounds(10, 80, 80, 25);
+        panel.add(reportLabel);
+
+        operationLabel = new JLabel("Operations");
+        operationLabel.setBounds(10, 110, 80, 25);
+        panel.add(operationLabel);
+
+        scoreLabel = new JLabel("Scores");
+        scoreLabel.setBounds(10, 140, 80, 25);
+        panel.add(scoreLabel);
+
+        placardLabel = new JLabel("Placard");
+        placardLabel.setBounds(10, 170, 80, 25);
+        panel.add(placardLabel);
+
+        logout = new JButton("Logout");
+        logout.setBounds(10,200,80,25);
+        panel.add(logout);
+
+        frame.setVisible(true);
     }
-
-    public void start(){
-        f.setSize(1024, 700);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        f.add(p);
-        p.setLayout(null);
-        {
-            p.add(cameraT);
-            cameraT.setBackground(Color.white);
-            cameraT.setBounds(25, 25,350, 300);
-        }
-
-        dashboardUI bar = new dashboardUI(725, 60 ,25, 150);
-        dashboardUI bar2 = new dashboardUI(755, 60 ,25, 150);
-
-        UIGraph gp = new UIGraph(100,400,300,150);
-        p.add(bar);
-        p.add(bar2);
-        p.add(sp);
-        p.add(gp);
-        sp.setValue(25);
-        //bar.setValue(25);
-        bar2.setValue(50);
-        p.repaint();
-        f.setVisible(true);
-
-		/*bar.setMin(-1);
-		bar.setMax(1);*/
-        Hashtable<String, Object> ht = new Hashtable<String, Object>();
-
-        ht.put("MAIN", 4);
-        ht.put("NOOB", "SDFSDF");
-
-        System.out.println(ht.toString());
-
-        Random rand = new Random();
-        int a = 0;
-
-        new Ping().start();
-
-
-        while(true){
-            try{Thread.sleep(10);}catch(Exception e){}
-            bar.setValue(((data + 1)/2)*100);
-            //bar.setValue(data);
-        }
-
-    }
-
-
-
-
 }
