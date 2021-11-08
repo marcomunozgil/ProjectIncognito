@@ -1,6 +1,6 @@
 import java.awt.Graphics;
 
-public interface UIObject {
+public interface UIObj {
 
 
     public void setValue(double d);

@@ -4,12 +4,12 @@ import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-public class UINumber extends dashboardUI {
+public class UINum extends dashboardUI {
 
     private int tSize = 30;
     private boolean isInt;
 
-    public UINumber(int x, int y, int w, int h) {
+    public UINum(int x, int y, int w, int h) {
         super(x, y, w, h);
 
     }

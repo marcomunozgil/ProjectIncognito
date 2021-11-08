@@ -2,7 +2,7 @@ import java.awt.Graphics;
 
 import javax.swing.JPanel;
 
-public class BasicUIObject extends JPanel implements UIObj  {
+public class dashboardUI extends JPanel implements UIObj  {
 
 
     double value = 0,min=0,max=100;

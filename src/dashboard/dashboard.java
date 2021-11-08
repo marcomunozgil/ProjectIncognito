@@ -6,11 +6,6 @@ import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import com.wildcatrobotics.dashboard.objects.UIBar;
-import com.wildcatrobotics.dashboard.objects.UIGraph;
-import com.wildcatrobotics.dashboard.objects.UISpeedometer;
-import com.wildcatrobotics.dashboard.sockettest.Ping;
-
 public class Dashboard {
 
     JFrame f = new JFrame("Dashboard");
