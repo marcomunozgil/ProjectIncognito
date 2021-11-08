@@ -1,5 +1,5 @@
 package ProjectIncognito.src.inspections;
-import ProjectIncognito.src.dashboard.*;
+//import ProjectIncognito.src.dashboard.*;
 import ProjectIncognito.src.inspections.Report;
 
 public class Placard extends Report {
