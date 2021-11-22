@@ -1,22 +1,25 @@
-package ProjectIncognito.src.inspections;
+package ProjectIncognito.Tests;
 
 import ProjectIncognito.src.classes.Establishment;
+import ProjectIncognito.src.inspections.Placard;
 import org.testng.annotations.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class InspectionsUnitTest {
-    Establishment facility = new Establishment();
     Placard testPlacard;
     String result;
+    Establishment facility = new Establishment();
+
 
     @Test
-    public void testGetPlacardColor(Establishment facility) {
-        this.facility = facility;
-        testPlacard = facility.getInspectionReport();
-        result = testPlacard.getPlacardColorPlacard();
+    public void testGetPlacardColor() {
 
-        assertEquals("red", result);
+
+        testPlacard = facility.getInspectionReport();
+
+        //null because no inspection has been made;
+        assertEquals(null, result);
     }
 }
