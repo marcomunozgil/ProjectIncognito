@@ -1,25 +1,24 @@
-package login;
+package view;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
 
 /**
- * Log in GUI for Project Incognito.
+ * Log in GUI for Project Incognito. Not currently used (Code is in View.java for now)
  */
-public class LoginGUI implements ActionListener {
+public class LoginGUI extends JFrame {
     private static JLabel label;
     private static JTextField userText;
     private static JLabel passwordLabel;
     private static JPasswordField passwordText;
     private static JButton login;
     private static JLabel welcome;
-    //private static JLabel failed;
 
     public static void main(String[] args) {
         JPanel panel = new JPanel();
         JFrame frame = new JFrame();
-        frame.setSize(500,300);
+        frame.setSize(500,500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.add(panel);
@@ -44,34 +43,13 @@ public class LoginGUI implements ActionListener {
 
         login = new JButton("Login");
         login.setBounds(10,80,80,25);
-        login.addActionListener(new LoginGUI());
         panel.add(login);
 
         welcome = new JLabel("");
         welcome.setBounds(10,110,300,25);
         panel.add(welcome);
 
-        //failed = new JLabel("");
-        //failed.setBounds(10,110,300,25);
-        //panel.add(failed);
-
         frame.setVisible(true);
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        String user = userText.getText();
-        char[] password = passwordText.getPassword();
-        System.out.println(user + ", " + Arrays.toString(password));
-
-        if(user.equals("user")) { // Will test Password later.
-            welcome.setText("Welcome back!");
-            //failed.setText("");
-        }
-        else {
-            //failed.setText("Log in failed. Try again.");
-            welcome.setText("Log in failed. Try again.");
-        }
     }
 
 }
