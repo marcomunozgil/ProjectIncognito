@@ -1,3 +1,5 @@
+package classes;
+
 import java.util.*;
 public class Establishment {
     private String managerName;
