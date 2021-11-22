@@ -1,0 +1,211 @@
+[33mcommit 11f786698d3346db7c99108ece5989f58fc88ec7[m[33m ([m[1;36mHEAD -> [m[1;32mIN-24-iterator-pattern[m[33m)[m
+Author: Jowyl Ong <jowylong@gmail.com>
+Date:   Sun Nov 21 22:26:12 2021 -0800
+
+    Created ReportScore and ReportIterator for Iterator Pattern. Updated Establishment class so it can work within the package. Unit Test is WIP.
+
+[33mcommit 9883bb359570912a67b3c3b520d861ea812f6801[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: e0adb6c 8dba816
+Author: jowylong <89226403+jowylong@users.noreply.github.com>
+Date:   Sun Nov 21 21:50:38 2021 -0800
+
+    Merge pull request #7 from marcomunozgil/IN-20-log-in-controller
+    
+    Added Login MVC.
+
+[33mcommit 8dba816fd9bbdcefc434e4c70aa6491e489f86fe[m[33m ([m[1;31morigin/IN-20-log-in-controller[m[33m, [m[1;32mIN-20-log-in-controller[m[33m)[m
+Author: Jowyl Ong <jowylong@gmail.com>
+Date:   Sun Nov 21 21:48:41 2021 -0800
+
+    Added Login MVC.
+
+[33mcommit e0adb6c4251c6b0e6ca1425d19651dd0ef4015ae[m
+Author: MarcoMunozGil <ma.munozgil@gmail.com>
+Date:   Mon Nov 8 02:21:41 2021 -0800
+
+    added a main class to test our code and also the placard GUI
+
+[33mcommit 01901c49c1f3a46c62874093e6be950adde1ccec[m
+Author: MarcoMunozGil <ma.munozgil@gmail.com>
+Date:   Mon Nov 8 00:23:55 2021 -0800
+
+    adding placard and report classes
+
+[33mcommit f102e6232cfb17513cca0d54f7ea9f1eb0a0c83e[m
+Merge: f5830ef fa3c44e
+Author: marcomunozgil <71687180+marcomunozgil@users.noreply.github.com>
+Date:   Sun Nov 7 23:34:42 2021 -0800
+
+    Merge pull request #5 from marcomunozgil/IN-8-log-in
+    
+    In 8 log in
+
+[33mcommit f5830ef9cd0dc0cb3c37c5799030b7ce4fee9849[m
+Merge: 91851cc 7c01235
+Author: marcomunozgil <71687180+marcomunozgil@users.noreply.github.com>
+Date:   Sun Nov 7 23:34:26 2021 -0800
+
+    Merge pull request #6 from marcomunozgil/IN-11-dashboard
+    
+    added dashboard
+
+[33mcommit 7c01235208a2be834ccfb644ee1464d79b661e6a[m[33m ([m[1;31morigin/IN-11-dashboard[m[33m)[m
+Merge: c3a99e6 930cdc4
+Author: Azusena <senareyes258@gmail.com>
+Date:   Sun Nov 7 21:49:00 2021 -0800
+
+    deleted because I had many bugs
+
+[33mcommit c3a99e6ee42f5d5f47de71d03faacac2d40367c7[m
+Author: Azusena <senareyes258@gmail.com>
+Date:   Sun Nov 7 21:45:19 2021 -0800
+
+    final source code for dashboard
+
+[33mcommit 930cdc4e5bb98d76c69c776b049e67c041d16fc1[m
+Author: Azusena <41088910+Azusena@users.noreply.github.com>
+Date:   Sun Nov 7 20:43:15 2021 -0800
+
+    Delete dashboardUI.java
+
+[33mcommit 9881f4a0e2e48f491061bbdaf62974d7c03079f7[m
+Author: Azusena <41088910+Azusena@users.noreply.github.com>
+Date:   Sun Nov 7 20:43:03 2021 -0800
+
+    Delete UIGraph.java
+
+[33mcommit cd3a0dd436a3c5b606bcd0417fbf7b73174ad8de[m
+Author: Azusena <41088910+Azusena@users.noreply.github.com>
+Date:   Sun Nov 7 20:42:53 2021 -0800
+
+    Delete UINum.java
+
+[33mcommit 3b88d2978926cae921e8e0ff92a538a782544e03[m
+Author: Azusena <41088910+Azusena@users.noreply.github.com>
+Date:   Sun Nov 7 20:42:43 2021 -0800
+
+    Delete UIObj.java
+
+[33mcommit 846280405030c17b246daaa39ba9759442a269aa[m
+Author: Azusena <senareyes258@gmail.com>
+Date:   Sun Nov 7 19:54:45 2021 -0800
+
+    fixed graph
+
+[33mcommit 7f6ee275119dfb4b03b8bb93bade4cfcfac04735[m
+Author: Azusena <senareyes258@gmail.com>
+Date:   Sun Nov 7 19:53:15 2021 -0800
+
+    added bar
+
+[33mcommit 2cdaf7150a33cab4a59462595fcdf4c2d9146244[m
+Author: Azusena <senareyes258@gmail.com>
+Date:   Sun Nov 7 19:43:03 2021 -0800
+
+    made changes to all classes
+
+[33mcommit f5a38353e342afa0b917ebbc54c4197fe032cc54[m
+Author: Azusena <senareyes258@gmail.com>
+Date:   Sun Nov 7 19:35:43 2021 -0800
+
+    UI classes for dashboard
+
+[33mcommit b4d842c0a66fb71881bb2663295ce6bd7842bd9c[m
+Author: Azusena <senareyes258@gmail.com>
+Date:   Sun Nov 7 19:24:18 2021 -0800
+
+    added dashboard.java
+
+[33mcommit 6d72f88296dd8d9d76b38ade0e9a6a10bd369a1b[m
+Author: Azusena <senareyes258@gmail.com>
+Date:   Sun Nov 7 19:23:50 2021 -0800
+
+    removed driver java
+
+[33mcommit fa3c44ea1abfbaf75ff6eaa28dcf6c5809431509[m[33m ([m[1;31morigin/IN-8-log-in[m[33m, [m[1;32mIN-8-log-in[m[33m)[m
+Author: Jowyl Ong <jowylong@gmail.com>
+Date:   Sun Nov 7 01:26:33 2021 -0700
+
+    Updated the Inspector and User classes with Javadoc. Added Log In GUI.
+
+[33mcommit 26112c7dfe9537b58837f25044c07ef50b223dd0[m
+Author: Jowyl Ong <jowylong@gmail.com>
+Date:   Sun Nov 7 00:39:40 2021 -0700
+
+    Updated the Inspector and User classes with Javadoc.
+
+[33mcommit 91851cca0497bcf45810bcef517e234a5fcbac2a[m
+Merge: 96ac52c 448858c
+Author: jowylong <89226403+jowylong@users.noreply.github.com>
+Date:   Sun Nov 7 00:01:15 2021 -0700
+
+    Merge pull request #4 from marcomunozgil/IN-1-add-user-classes
+    
+    In 1 add user classes
+
+[33mcommit 448858c1300fe31ce7be6e8da4c5f63e625ff9a3[m[33m ([m[1;31morigin/IN-1-add-user-classes[m[33m)[m
+Merge: 05ac7fd c3aefae
+Author: Jowyl Ong <jowylong@gmail.com>
+Date:   Sat Nov 6 23:59:38 2021 -0700
+
+    Updated classes
+
+[33mcommit 05ac7fd7089d045a3d6ea608dd460a6d5e5a0426[m
+Author: Jowyl Ong <jowylong@gmail.com>
+Date:   Sat Nov 6 22:53:12 2021 -0700
+
+    Updated classes
+
+[33mcommit 96ac52c54177fc0d89d5537952ffad7d63e88199[m
+Merge: 686420a daf29e5
+Author: marcomunozgil <71687180+marcomunozgil@users.noreply.github.com>
+Date:   Wed Oct 20 22:48:05 2021 -0700
+
+    Merge pull request #2 from marcomunozgil/IN-2-add-establishment-inspection-classes
+    
+    added establishment and inspection class
+
+[33mcommit 686420a709c5b411f3867110487c3ebeb8ad881f[m
+Merge: 4c2be8b c3aefae
+Author: marcomunozgil <71687180+marcomunozgil@users.noreply.github.com>
+Date:   Wed Oct 20 22:23:27 2021 -0700
+
+    Merge pull request #1 from marcomunozgil/IN-1-add-user-classes
+    
+    In 1 add user classes
+
+[33mcommit daf29e57a2924b7d397a388303b70fcca25c5549[m[33m ([m[1;31morigin/IN-2-add-establishment-inspection-classes[m[33m)[m
+Author: Azusena <senareyes258@gmail.com>
+Date:   Wed Oct 20 15:48:01 2021 -0700
+
+    made src and added two classes, Establishment and Inspection
+
+[33mcommit cb8d7f49fa6f7f5c902bed9bbb40042852ed8612[m
+Author: Azusena <senareyes258@gmail.com>
+Date:   Wed Oct 20 15:35:47 2021 -0700
+
+    added .idea to .gitignore
+
+[33mcommit c3aefae00fb210719f234a85cf9559764f6e629a[m
+Author: jowylong <89226403+jowylong@users.noreply.github.com>
+Date:   Tue Oct 19 18:33:49 2021 -0700
+
+    Delete .idea directory
+
+[33mcommit c6becce8f683d08aa424d30b893a9cb078cd606d[m
+Author: Jowyl Ong <jowylong@gmail.com>
+Date:   Mon Oct 18 21:43:01 2021 -0700
+
+    Established the User and Inspector classes.
+
+[33mcommit 4c2be8b773eb62742f9056afab07fa4fe9145aa6[m
+Author: marcomunozgil <71687180+marcomunozgil@users.noreply.github.com>
+Date:   Thu Oct 14 23:19:58 2021 -0700
+
+    Create driver.java
+
+[33mcommit fe5ec2c53287592e73e33a2624794c7d28c6c1ac[m
+Author: marcomunozgil <71687180+marcomunozgil@users.noreply.github.com>
+Date:   Thu Oct 14 23:01:51 2021 -0700
+
+    Initial commit
