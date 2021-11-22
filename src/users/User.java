@@ -1,18 +1,32 @@
-package users;
+package ProjectIncognito.src.users;
+
+import ProjectIncognito.src.classes.Establishment;
+import ProjectIncognito.src.inspections.UserInspection;
 
 /**
- * User class. Currently what most users will be defined as for Project Incognito.
+ * User class. Currently what most ProjectIncognito.src.users will be defined as for Project Incognito.
  */
 public class User {
-    private String name;
+    public String getName() {
+        return name;
+    }
+
+
+
+    private String name = "Karen";
     private String role = "User";
     private String establishment;
+    private Establishment facility;
+    private UserInspection inspection;
+
+
 
     /**
      * Able to add an Establishment if it is not listed in the website.
+     * @param facility
      */
-    public void addEstablishment() {
-
+    public void addEstablishment(Establishment facility) {
+        this.facility = facility;
     }
 
     /**
@@ -31,6 +45,11 @@ public class User {
      */
     public void rateInspector(int rate) {
 
+    }
+
+    public void doInspection (Establishment facility){
+        inspection = new UserInspection();
+        inspection.doInspection(facility);
     }
 
 }

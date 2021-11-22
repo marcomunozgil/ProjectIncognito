@@ -1,14 +1,33 @@
-package users;
+package ProjectIncognito.src.users;
 
-import java.util.*;
+import ProjectIncognito.src.classes.Establishment;
+import ProjectIncognito.src.inspections.InspectorInspection;
 
 /**
  * Inspector class that extends from User.
  */
 public class Inspector extends User {
-    private String name;
+
+
+    private String name = "John Doe";
     private String role = "Inspector";
-    private String establishment;
+    private String establishment = "no name";
+    private InspectorInspection inspection;
+    private Establishment facility;
+
+    public String getName() {
+        this.name = name;
+        return name;
+    }
+
+    /**
+     * Able to add an Establishment if it is not listed in the website.
+     * @param facility
+     */
+    public void addEstablishment(Establishment facility) {
+        this.facility = facility;
+    }
+
 
     /**
      * Inspector will be able to rate the Establishment
@@ -20,9 +39,15 @@ public class Inspector extends User {
     }
 
     /**
-     * Inspectors will be able to conduct an Inspection using the Inspection class.
+     * Inspectors will be able to conduct an Inspection using the Inspection interface
+     * thanks to the strategy coding pattern implemented
+     * @param facility is the establishment to be inspected.
      */
-    public void Inspection() {
+    public void doInspection(Establishment facility) {
+            inspection = new InspectorInspection();
+            inspection.doInspection(facility);
 
     }
+
+
 }
