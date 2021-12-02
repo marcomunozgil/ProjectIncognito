@@ -2,7 +2,9 @@ package view;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
+//this is the dashboard view
 public class dashboard extends JFrame{
     private static JLabel label;
     private static JLabel homeLabel;
@@ -59,4 +61,10 @@ public class dashboard extends JFrame{
 
         frame.setVisible(true);
     }
+
+    //execute doInspection method when button is clicked
+    public void addInspectionListener(ActionListener listenforinspectionbutton){
+        doInspection.addActionListener(listenforinspectionbutton);
+    }
+
 }

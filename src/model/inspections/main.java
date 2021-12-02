@@ -8,10 +8,12 @@ import controller.Controller;
 import controller.Message;
 import model.LoginModel;
 import model.classes.Establishment;
+import model.dashboardControl;
 import model.users.Inspector;
 import model.users.User;
 import view.View;
 import view.dashboard;
+import view.dashboardModel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,12 +27,26 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class main {
 
     public static void main(String[] args) {
+        BlockingQueue<Message> queue = new LinkedBlockingQueue<>();
+
+        LoginModel model = new LoginModel();
+        View view = new View(queue);
+        dashboard theView = new dashboard();
+        dashboardModel theModel = new dashboardModel();
+        dashboardControl dc = new dashboardControl(theView, theModel);
+
+
+        Controller controller = new Controller(queue, model, view);
+        //theModel.setVisible(true);
+        controller.mainLoop();
+
 
 
         System.out.println();
         System.out.println();
         Inspector JohnDoe = new Inspector();
         User Karen = new User();
+
         System.out.println("A new user was made named: " + JohnDoe.getName() + ".");
         System.out.println("A new user was made named: " + Karen.getName() + ".");
         Establishment InNout = new Establishment();
@@ -53,19 +69,18 @@ public class main {
          * inspector conducts the inspection in the establishment added by user
          */
         System.out.println("Inspector John has begun an inspection in the new establishment...");
-        JohnDoe.doInspection(InNout, JohnDoe.getName());
+       // JohnDoe.doInspection(InNout, JohnDoe.getName());
         System.out.println();
         System.out.println();
+
+        //make dashboard button work here
+
+
+
+
         System.out.println("End of the program...");
 
-        BlockingQueue<Message> queue = new LinkedBlockingQueue<>();
 
-        LoginModel model = new LoginModel();
-        View view = new View(queue);
-        dashboard db = new dashboard();
-        Controller controller = new Controller(queue, model, view);
-        db.setVisible(true);
-        controller.mainLoop();
 
 
 
