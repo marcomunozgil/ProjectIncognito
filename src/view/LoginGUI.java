@@ -25,23 +25,23 @@ public class LoginGUI extends JFrame {
 
         panel.setLayout(null);
 
-        label = new JLabel("Username");
+        label = new JLabel("Username:");
         label.setBounds(10,20,80,25);
         panel.add(label);
 
         userText = new JTextField(20);
-        userText.setBounds(100,20,165,25);
+        userText.setBounds(10,45,165,25);
         panel.add(userText);
 
-        passwordLabel = new JLabel("Password");
-        passwordLabel.setBounds(10,50,80,25);
+        passwordLabel = new JLabel("Password:");
+        passwordLabel.setBounds(10,90,80,25);
         panel.add(passwordLabel);
 
         passwordText = new JPasswordField();
-        passwordText.setBounds(100,50,165,25);
+        passwordText.setBounds(10,50,165,25);
         panel.add(passwordText);
 
-        login = new JButton("Login");
+        login = new JButton("Log In");
         login.setBounds(10,80,80,25);
         panel.add(login);
 

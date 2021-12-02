@@ -14,14 +14,18 @@ public class dashboard {
     private static JButton logout;
     //private static JLabel failed;
 
+
+
     public static void main(String[] args) {
         JPanel panel = new JPanel();
         JFrame frame = new JFrame();
+        frame.setTitle("Food Establishment Inspection Report");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.add(panel);
-
+        panel.setBackground(Color.cyan);
         panel.setLayout(null);
         Font font = new Font("Helvetica", Font.BOLD, 25);
 
@@ -52,6 +56,7 @@ public class dashboard {
 
         logout = new JButton("Log Out");
         logout.setBounds(10,200,450,25);
+        logout.
         panel.add(logout);
 
         frame.setVisible(true);
