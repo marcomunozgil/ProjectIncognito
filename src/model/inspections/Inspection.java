@@ -8,5 +8,5 @@ import model.classes.Establishment;
  * an inspection, while the user can only view the results (placard) of the inspection.
  */
 public interface Inspection {
-   void doInspection(Establishment facility);
+   void doInspection(Establishment facility, String nameOfInspector);
 }

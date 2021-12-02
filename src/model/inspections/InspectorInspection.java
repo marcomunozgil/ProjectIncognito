@@ -1,5 +1,6 @@
 package model.inspections;
 import model.classes.Establishment;
+import model.users.Inspector;
 import view.PlacardV;
 
 
@@ -13,10 +14,10 @@ public class InspectorInspection implements Inspection {
      * and a placard in it. this info will then be forward to the view class
      */
     @Override
-    public void doInspection(Establishment facility) {
+    public void doInspection(Establishment facility, String nameOfInspector) {
         this.facility = facility;
 
-        Placard report1 = new Placard();
+        Placard report1 = new Placard(nameOfInspector);
         //System.out.println("An inspection has been created!"); //for debugging
         System.out.println("Doing inspection...");
         System.out.println("Here are the results of the inspection on "
@@ -34,9 +35,10 @@ public class InspectorInspection implements Inspection {
 
         System.out.println("Placard color: " + report1.questions.setPlacardColorPlacard() + ".");
 
+        System.out.println("Inspected by: " + nameOfInspector);
 
 
-        PlacardV.PlacardGUI view = new PlacardV.PlacardGUI(report1.questions.setPlacardColorPlacard());
+        PlacardV.PlacardGUI view = new PlacardV.PlacardGUI(report1.questions.setPlacardColorPlacard(), report1.getInspectorName(), report1.questions.getTotalScore());
     }
 
     /**
