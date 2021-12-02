@@ -47,9 +47,9 @@ public class User {
 
     }
 
-    public void doInspection (Establishment facility){
+    public void doInspection (Establishment facility, String nameOfInspector){
         inspection = new UserInspection();
-        inspection.doInspection(facility);
+        inspection.doInspection(facility, nameOfInspector);
     }
 
 }

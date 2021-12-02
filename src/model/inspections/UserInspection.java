@@ -12,7 +12,7 @@ public class UserInspection implements Inspection {
      * that the program needs to check if the establishment has been inspected
      */
     @Override
-    public void doInspection(Establishment facility){
+    public void doInspection(Establishment facility, String nameOfInspector){
 
 
         //System.out.println("An inspection has been initiated!"); //for debugging

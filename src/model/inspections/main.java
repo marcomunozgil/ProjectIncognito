@@ -31,7 +31,7 @@ public class main {
          * for debugging purposes
          */
         System.out.println("User Karen has begun inspection in the new establishment...");
-        Karen.doInspection(InNout);
+        Karen.doInspection(InNout, Karen.getName());
         /**
          * user adds establishment to inspection queue
          */
@@ -43,7 +43,7 @@ public class main {
          * inspector conducts the inspection in the establishment added by user
          */
         System.out.println("Inspector John has begun an inspection in the new establishment...");
-        JohnDoe.doInspection(InNout);
+        JohnDoe.doInspection(InNout, JohnDoe.getName());
         System.out.println();
         System.out.println();
         System.out.println("End of the program...");

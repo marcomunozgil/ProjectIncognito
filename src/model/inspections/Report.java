@@ -12,19 +12,19 @@ public class Report{
     String Address = " no address";
     String date = " no date";
     String ManagerName = " no name";
-    String inspector = " no inspector assigned";
+    String inspector;
     int reportScore;
     String notes = "no notes";
     boolean evidence = false; //meaning no pictures yet
     Questionnaire questions;
     Placard placard;
 
-    public Report () {
+    public Report (String nameOfInspector) {
         this.EstablishmentName = EstablishmentName;
         this.Address = Address;
         this.date = date;
         this.ManagerName = ManagerName;
-        this.inspector = inspector;
+        this.inspector = nameOfInspector ;//
         this.notes = notes;
 
         /**

@@ -43,9 +43,10 @@ public class Inspector extends User {
      * thanks to the strategy coding pattern implemented
      * @param facility is the establishment to be inspected.
      */
-    public void doInspection(Establishment facility) {
+    public void doInspection(Establishment facility, String nameOfInspector) {
             inspection = new InspectorInspection();
-            inspection.doInspection(facility);
+            inspection.doInspection(facility, nameOfInspector);
+
 
     }
 

@@ -8,8 +8,12 @@ public class Placard extends Report {
      */
     String placardColor = " ";
     String placardTitle;
-    String establishmentName;
+    String placardMessage;
     String inspectorName;
+
+    public Placard(String nameOfInspector) {
+        super(nameOfInspector);
+    }
 
     /**
      *method to assign and return the color of the placard on the provided report.
@@ -66,7 +70,7 @@ public class Placard extends Report {
     }
 
     public String getEstablishmentName(){
-        establishmentName = EstablishmentName;
+        placardMessage = EstablishmentName;
         return EstablishmentName;
     }
 
