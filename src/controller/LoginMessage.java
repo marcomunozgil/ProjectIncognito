@@ -4,21 +4,21 @@ package controller;
  * Log-in message class that implements the message interface.
  */
 public class LoginMessage implements Message {
-    private String username;
-    private char[] password;
+    String username;
+    String password;
 
     /**
      * Initializes the user and pass variables.
      * @param username username
      * @param password password
      */
-    public LoginMessage(String username, char[] password) {
+    public LoginMessage(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
     /**
-     * Gives the username
+     * Gives the username.
      * @return username
      */
     public String getUsername() {
@@ -29,7 +29,7 @@ public class LoginMessage implements Message {
      * Gives the password.
      * @return password
      */
-    public char[] getPassword() {
+    public String getPassword() {
         return password;
     }
 

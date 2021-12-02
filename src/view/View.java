@@ -14,7 +14,7 @@ public class View extends JFrame {
     JLabel label;
     JTextField userText;
     JLabel passwordLabel;
-    JPasswordField passwordText;
+    JTextField passwordText;
     JButton loginButton;
     JLabel welcome;
 
@@ -47,7 +47,7 @@ public class View extends JFrame {
         passwordLabel.setBounds(10, 50, 80, 25);
         panel.add(passwordLabel);
 
-        passwordText = new JPasswordField();
+        passwordText = new JTextField(); //Text field to simplify the test. Password field would be usually used.
         passwordText.setBounds(100, 50, 165, 25);
         panel.add(passwordText);
 
@@ -61,9 +61,10 @@ public class View extends JFrame {
 
         loginButton.addActionListener(e -> {
             String user = userText.getText();
-            char[] pass = passwordText.getPassword();
+            String pass = passwordText.getText();
             try {
-                queue.put(new LoginMessage(user, pass));
+                Message msg = new LoginMessage(user, pass);
+                queue.put(msg);
             } catch (InterruptedException exception) {
                 //do nothing
             }
@@ -76,8 +77,14 @@ public class View extends JFrame {
      * @param value username
      * @param pass password
      */
-    public void updateLoginInfo(String value, char[] pass) {
-        this.welcome.setText("Welcome " + value + "!"); //Changes the welcome message so that it reflects the username inputted.
+    public void updateLoginInfo(String value, String pass) {
+        //this.welcome.setText("Welcome " + value + "!"); //Changes the welcome message so that it reflects the username inputted.
+        if (value.equals("karen") && pass.equals("password")) {
+            EstablishmentView eView = new EstablishmentView();
+            eView.setVisible(true);
+        } else {
+            welcome.setText("Invalid username or password. Please try again.");
+        }
     }
 
 }
