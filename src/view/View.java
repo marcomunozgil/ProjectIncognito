@@ -71,6 +71,11 @@ public class View extends JFrame {
 
     }
 
+    /**
+     * Method that is used to welcome the entered username. Password is not currently used.
+     * @param value username
+     * @param pass password
+     */
     public void updateLoginInfo(String value, char[] pass) {
         this.welcome.setText("Welcome " + value + "!"); //Changes the welcome message so that it reflects the username inputted.
     }
