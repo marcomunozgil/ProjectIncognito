@@ -18,11 +18,17 @@ public class View extends JFrame {
     JButton loginButton;
     JLabel welcome;
 
+    /**
+     * Creates view and queue that stores messages
+     *
+     * @param queue queue that stores messages
+     */
     public View(BlockingQueue<Message> queue) {
         this.queue = queue;
+
         JPanel panel = new JPanel();
         JFrame frame = new JFrame();
-        frame.setSize(1000, 1000);
+        frame.setSize(1100, 700);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.add(panel);
@@ -49,10 +55,9 @@ public class View extends JFrame {
         loginButton.setBounds(10, 80, 80, 25);
         panel.add(loginButton);
 
-        welcome = new JLabel("Testing");
+        welcome = new JLabel("Hello! Please enter your username and password.");
+        welcome.setBounds(10,110,700,25);
         panel.add(welcome);
-
-        frame.setVisible(true);
 
         loginButton.addActionListener(e -> {
             String user = userText.getText();
@@ -66,8 +71,8 @@ public class View extends JFrame {
 
     }
 
-    public void updateLoginInfo(String user, char[] pass) {
-        this.welcome.setText("Welcome " + user + "!");
+    public void updateLoginInfo(String value, char[] pass) {
+        this.welcome.setText("Welcome " + value + "!"); //Changes the welcome message so that it reflects the username inputted.
     }
 
 }

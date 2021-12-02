@@ -1,6 +1,5 @@
 import controller.Controller;
 import controller.Message;
-import controller.LoginMessage;
 import view.View;
 import model.LoginModel;
 
