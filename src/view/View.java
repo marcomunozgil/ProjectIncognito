@@ -80,8 +80,8 @@ public class View extends JFrame {
     public void updateLoginInfo(String value, String pass) {
         //this.welcome.setText("Welcome " + value + "!"); //Changes the welcome message so that it reflects the username inputted.
         if (value.equals("karen") && pass.equals("password")) {
-            EstablishmentView eView = new EstablishmentView();
-            eView.setVisible(true);
+            dashboard db = new dashboard();
+            db.setVisible(true);
         } else {
             welcome.setText("Invalid username or password. Please try again.");
         }

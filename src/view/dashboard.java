@@ -3,7 +3,7 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 
-public class dashboard {
+public class dashboard extends JFrame{
     private static JLabel label;
     private static JLabel homeLabel;
     private static JLabel reportLabel;
@@ -14,7 +14,7 @@ public class dashboard {
     private static JButton logout;
     //private static JLabel failed;
 
-    public static void main(String[] args) {
+    public dashboard() {
         JPanel panel = new JPanel();
         JFrame frame = new JFrame();
         frame.setSize(500, 300);
@@ -31,20 +31,23 @@ public class dashboard {
         panel.add(label);
 
         /**homeLabel = new JLabel("Home");
-        homeLabel.setBounds(10, 50, 80, 25);
-        panel.add(homeLabel);*/
+        *homeLabel.setBounds(10, 50, 80, 25);
+        *panel.add(homeLabel);
+         */
 
         /**reportLabel = new JLabel("Reports");
-        reportLabel.setBounds(10, 80, 80, 25);
-        panel.add(reportLabel);*/
+        *reportLabel.setBounds(10, 80, 80, 25);
+        *panel.add(reportLabel);
+         */
 
         addEstablishment = new JButton("Add an Establishment");
         addEstablishment.setBounds(10, 100, 450, 25);
         panel.add(addEstablishment);
 
        /** scoreLabel = new JLabel("Scores");
-        scoreLabel.setBounds(10, 140, 80, 25);
-        panel.add(scoreLabel);*/
+        *scoreLabel.setBounds(10, 140, 80, 25);
+        *panel.add(scoreLabel);
+        */
 
         doInspection = new JButton("Do an Inspection");
         doInspection.setBounds(10, 150, 450, 25);
