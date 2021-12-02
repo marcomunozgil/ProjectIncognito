@@ -1,7 +1,7 @@
-package ProjectIncognito.src.users;
+package model.users;
 
-import ProjectIncognito.src.classes.Establishment;
-import ProjectIncognito.src.inspections.InspectorInspection;
+import model.classes.Establishment;
+import model.inspections.InspectorInspection;
 
 /**
  * Inspector class that extends from User.

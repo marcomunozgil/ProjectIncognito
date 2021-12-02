@@ -1,10 +1,10 @@
-package ProjectIncognito.src.users;
+package model.users;
 
-import ProjectIncognito.src.classes.Establishment;
-import ProjectIncognito.src.inspections.UserInspection;
+import model.classes.Establishment;
+import model.inspections.UserInspection;
 
 /**
- * User class. Currently what most ProjectIncognito.src.users will be defined as for Project Incognito.
+ * User class. Currently what most ProjectIncognito.src.model.users will be defined as for Project Incognito.
  */
 public class User {
     public String getName() {

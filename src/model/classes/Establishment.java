@@ -1,8 +1,7 @@
-package ProjectIncognito.src.classes;
+package model.classes;
 
-import ProjectIncognito.src.inspections.Placard;
+import model.inspections.Placard;
 
-import java.util.*;
 public class Establishment {
     private String managerName;
     private String establishmentName = "McDonald's";
