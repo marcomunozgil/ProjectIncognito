@@ -4,13 +4,12 @@ import model.classes.Establishment;
 import model.inspections.UserInspection;
 
 /**
- * User class. Currently what most ProjectIncognito.src.model.users will be defined as for Project Incognito.
+ * User class. Currently what most model.users will be defined as for Project Incognito.
  */
 public class User {
     public String getName() {
         return name;
     }
-
 
 
     private String name = "Karen";
@@ -20,10 +19,9 @@ public class User {
     private UserInspection inspection;
 
 
-
     /**
      * Able to add an Establishment if it is not listed in the website.
-     * @param facility
+     * @param facility establishment
      */
     public void addEstablishment(Establishment facility) {
         this.facility = facility;
@@ -50,6 +48,14 @@ public class User {
     public void doInspection (Establishment facility, String nameOfInspector){
         inspection = new UserInspection();
         inspection.doInspection(facility, nameOfInspector);
+    }
+
+    /**
+     * Method that returns the role name.
+     * @return role name
+     */
+    public String getRole() {
+        return role;
     }
 
 }

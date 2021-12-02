@@ -5,7 +5,7 @@ package model;
  */
 public class LoginModel {
     private String username;
-    private char[] password;
+    private String password;
 
     /**
      * Sets the username that the user typed
@@ -19,7 +19,7 @@ public class LoginModel {
      * Sets the password that the user typed.
      * @param password password
      */
-    public void setPassword(char[] password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -35,7 +35,7 @@ public class LoginModel {
      * Gives the password.
      * @return password
      */
-    public char[] getPassword() {
+    public String getPassword() {
         return password;
     }
 
