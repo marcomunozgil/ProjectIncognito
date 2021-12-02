@@ -2,12 +2,18 @@ package ProjectIncognito.src.inspections;
 
 public class Report{
 
+
+    //next step is to generate the score from the questionarie and pass it to
+    //variable here
+
+
+
     String EstablishmentName = "no name";
     String Address = " no address";
     String date = " no date";
     String ManagerName = " no name";
     String inspector = " no inspector assigned";
-    int reportScore = 0;
+    int reportScore;
     String notes = "no notes";
     boolean evidence = false; //meaning no pictures yet
     Questionnaire questions;
@@ -19,7 +25,6 @@ public class Report{
         this.date = date;
         this.ManagerName = ManagerName;
         this.inspector = inspector;
-        this.reportScore = reportScore;
         this.notes = notes;
 
         /**
@@ -28,6 +33,8 @@ public class Report{
          * all the answers in the questionnaire.
          */
         this.questions = new Questionnaire();
+        //System.out.println(" this is the score from the report " + questions.getTotalScore());
+        this.reportScore = questions.getTotalScore();
 
         /**
          * Once a questionnaire is made a report placard will also be made to

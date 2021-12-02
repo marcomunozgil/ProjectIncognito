@@ -25,9 +25,17 @@ public class InspectorInspection implements Inspection {
         System.out.println(report1.questions.getQuestion3());
         System.out.println(report1.questions.getQuestion4());
         System.out.println(report1.questions.getQuestion5());
+        System.out.println();
 
-        System.out.println("Placard color: " + report1.getPlacardColorPlacard() + ".");
+        System.out.println("Overall: " + report1.questions.setPlacardTitle());
 
+        System.out.println("Placard Score: " + report1.questions.getTotalScore());
+
+        System.out.println("Placard color: " + report1.questions.setPlacardColorPlacard() + ".");
+
+
+
+        PlacardV.PlacardGUI view = new PlacardV.PlacardGUI(report1.questions.setPlacardColorPlacard());
     }
 
     /**
@@ -36,6 +44,7 @@ public class InspectorInspection implements Inspection {
      * @return the score of the inspection to be included in report and
      * placard classes.
      */
+
     public int calculateScore(int score){
         return score;
     }
