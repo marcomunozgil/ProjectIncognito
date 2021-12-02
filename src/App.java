@@ -2,6 +2,7 @@ import controller.Controller;
 import controller.Message;
 import view.View;
 import model.LoginModel;
+import view.dashboard;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -12,7 +13,9 @@ public class App {
 
         LoginModel model = new LoginModel();
         View view = new View(queue);
+        dashboard db = new dashboard();
         Controller controller = new Controller(queue, model, view);
+        db.setVisible(true);
         controller.mainLoop();
     }
 }
