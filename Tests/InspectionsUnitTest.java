@@ -1,6 +1,4 @@
-package ProjectIncognito.Tests;
-
-import ProjectIncognito.src.classes.Establishment;
+import model.classes.Establishment;
 import model.inspections.Placard;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
