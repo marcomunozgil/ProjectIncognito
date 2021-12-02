@@ -1,5 +1,6 @@
-package ProjectIncognito.src.inspections;
-import ProjectIncognito.src.classes.Establishment;
+package model.inspections;
+import model.classes.Establishment;
+import view.PlacardV;
 
 
 public class InspectorInspection implements Inspection {
@@ -42,7 +43,7 @@ public class InspectorInspection implements Inspection {
      * this method will calculate a score for the inspection
      * @param score will contain the numerical value of the inspection
      * @return the score of the inspection to be included in report and
-     * placard classes.
+     * placard model.classes.
      */
 
     public int calculateScore(int score){

@@ -1,4 +1,4 @@
-package ProjectIncognito.src.inspections;
+package model.inspections;
 
 public class Questionnaire{
 

@@ -1,8 +1,9 @@
-package ProjectIncognito.src.inspections;
+package view;
 
 import javax.swing.*;
 import javax.swing.table.JTableHeader;
 import java.awt.*;
+import model.inspections.Placard;
 
 import static javax.swing.text.StyleConstants.Bold;
 
@@ -19,7 +20,7 @@ public class PlacardV extends Placard {
 
         //GUI for the report, this is just a representation of the report's
         //placard for the given inspection.
-        PlacardGUI(String colorForPlacard) {
+        public PlacardGUI(String colorForPlacard) {
 
 
             JLayeredPane topTitleArea = new JLayeredPane();

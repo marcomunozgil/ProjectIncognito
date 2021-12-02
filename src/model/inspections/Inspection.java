@@ -1,5 +1,5 @@
-package ProjectIncognito.src.inspections;
-import ProjectIncognito.src.classes.Establishment;
+package model.inspections;
+import model.classes.Establishment;
 
 
 /**

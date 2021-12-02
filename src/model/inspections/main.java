@@ -1,15 +1,15 @@
-/*Use this main to test your classes or other code
+/*Use this main to test your model.classes or other code
 you added to start debugging or adding features
  */
 
-package ProjectIncognito.src.inspections;
+package model.inspections;
 
-import ProjectIncognito.src.classes.Establishment;
-import ProjectIncognito.src.users.Inspector;
-import ProjectIncognito.src.users.User;
+import model.classes.Establishment;
+import model.users.Inspector;
+import model.users.User;
 
 /**
- * this main is intended to be use only to test classes and simulate the behavior
+ * this main is intended to be use only to test model.classes and simulate the behavior
  * of the program, but it is not the final main with the MVC coding pattern implemented
  */
 public class main {

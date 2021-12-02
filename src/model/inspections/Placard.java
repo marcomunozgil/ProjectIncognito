@@ -1,6 +1,6 @@
-package ProjectIncognito.src.inspections;
+package model.inspections;
 
-public class Placard extends Report { //
+public class Placard extends Report {
 
 
     /**

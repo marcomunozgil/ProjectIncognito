@@ -1,4 +1,4 @@
-package classes;
+package model.classes;
 
 /**
  * Interface for the iterator pattern.

@@ -1,5 +1,5 @@
-package ProjectIncognito.src.inspections;
-import ProjectIncognito.src.classes.Establishment;
+package model.inspections;
+import model.classes.Establishment;
 
 public class UserInspection implements Inspection {
 
@@ -24,7 +24,7 @@ public class UserInspection implements Inspection {
         inspectionStatus = facility.getStatus();
         if (inspectionStatus == false) {
             System.out.println("This facility has not been inspected yet! ");
-            System.out.println("Please add the facility to the inspections queue.");
+            System.out.println("Please add the facility to the model.inspections queue.");
         }
         else {
             System.out.println("Please find the inspection results below: ");
