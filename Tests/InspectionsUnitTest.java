@@ -2,8 +2,7 @@ package ProjectIncognito.Tests;
 
 import ProjectIncognito.src.classes.Establishment;
 import ProjectIncognito.src.inspections.Placard;
-import org.testng.annotations.Test;
-
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
