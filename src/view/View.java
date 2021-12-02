@@ -28,7 +28,7 @@ public class View extends JFrame {
 
         JPanel panel = new JPanel();
         JFrame frame = new JFrame();
-        frame.setSize(1100, 700);
+        frame.setSize(700, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.add(panel);
@@ -47,7 +47,7 @@ public class View extends JFrame {
         passwordLabel.setBounds(10, 50, 80, 25);
         panel.add(passwordLabel);
 
-        passwordText = new JTextField(); //Text field to simplify the test. Password field would be usually used.
+        passwordText = new JTextField(); //Text field to simplify the test. Password field would usually be used.
         passwordText.setBounds(100, 50, 165, 25);
         panel.add(passwordText);
 
@@ -73,7 +73,7 @@ public class View extends JFrame {
     }
 
     /**
-     * Method that is used to welcome the entered username. Password is not currently used.
+     * Method that is used to welcome the entered username.
      * @param value username
      * @param pass password
      */
