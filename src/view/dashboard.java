@@ -62,6 +62,10 @@ public class dashboard extends JFrame{
         frame.setVisible(true);
     }
 
+    public void addEstablishmentListener(ActionListener listenforaddestablishmentbutton) {
+        addEstablishment.addActionListener(listenforaddestablishmentbutton);
+    }
+
     //execute doInspection method when button is clicked
     public void addInspectionListener(ActionListener listenforinspectionbutton){
         doInspection.addActionListener(listenforinspectionbutton);
