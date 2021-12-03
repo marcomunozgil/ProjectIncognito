@@ -20,6 +20,18 @@ public class dashboardControl{
 
         //when doInspection button is pressed execute method in inspectionlistener inner class
         this.theView.addInspectionListener(new InspectionListener());
+        this.theView.addLogOutListener(new logOutListener());
+    }
+
+    class logOutListener implements ActionListener{
+        public void actionPerformed (ActionEvent i) {
+            try {
+                theModel.logOut();
+            }
+            catch (NullPointerException e){
+                throw e;
+            }
+        }
     }
 
     class InspectionListener implements ActionListener{

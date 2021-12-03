@@ -11,4 +11,9 @@ public class dashboardModel {
     public void doInspection (Inspector John, Establishment place) {
         JohnDoe.doInspection(place, John.getName());
     }
+
+
+    public void logOut () {
+        System.exit(0);
+    }
 }

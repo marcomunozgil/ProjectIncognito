@@ -67,4 +67,8 @@ public class dashboard extends JFrame{
         doInspection.addActionListener(listenforinspectionbutton);
     }
 
+    public void addLogOutListener(ActionListener listenforlogoutbutton) {
+        logout.addActionListener(listenforlogoutbutton);
+    }
+
 }
