@@ -4,52 +4,47 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-//this is the dashboard view
+/**
+ * This is the dashboard view class. It's essentially the GUI, this is the what the
+ * user will see in the screen. It does not
+ */
 public class dashboard extends JFrame{
     private static JLabel label;
-    private static JLabel homeLabel;
-    private static JLabel reportLabel;
     private static JButton addEstablishment;
-    private static JLabel scoreLabel;
     private static JButton doInspection;
-
     private static JButton logout;
-    //private static JLabel failed;
 
+    /**
+     * This constructor sets up the dashboard view class and adds the components of
+     * the GUI.
+     */
     public dashboard() {
         JPanel panel = new JPanel();
         JFrame frame = new JFrame();
         frame.setSize(500, 300);
+        panel.setBackground(Color.CYAN);
+        frame.setTitle("Food Safety Inspections by Incognito Team");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.add(panel);
-
         panel.setLayout(null);
         Font font = new Font("Helvetica", Font.BOLD, 25);
-
+        /**
+        * This is just a label at the top of the dashboard.
+        */
         label = new JLabel("        Welcome to your dashboard!");
         label.setFont(font);
         label.setBounds(10, 20, 500, 25);
         panel.add(label);
 
-        /**homeLabel = new JLabel("Home");
-        *homeLabel.setBounds(10, 50, 80, 25);
-        *panel.add(homeLabel);
+         /**
+         * The next components are the three buttons in the dashboard. The first one is the
+         * add establishment button. The second one is the do inspection button, and the last
+         * one is the log out button.
          */
-
-        /**reportLabel = new JLabel("Reports");
-        *reportLabel.setBounds(10, 80, 80, 25);
-        *panel.add(reportLabel);
-         */
-
         addEstablishment = new JButton("Add an Establishment");
         addEstablishment.setBounds(10, 100, 450, 25);
         panel.add(addEstablishment);
-
-       /** scoreLabel = new JLabel("Scores");
-        *scoreLabel.setBounds(10, 140, 80, 25);
-        *panel.add(scoreLabel);
-        */
 
         doInspection = new JButton("Do an Inspection");
         doInspection.setBounds(10, 150, 450, 25);
@@ -62,11 +57,15 @@ public class dashboard extends JFrame{
         frame.setVisible(true);
     }
 
+    /**
+     * The next three functions execute the method in the body when the button is pressed.
+     * They all have one parameter which is the listener for the respective button.
+     * @param listenforaddestablishmentbutton listener for the add establishment method.
+     */
     public void addEstablishmentListener(ActionListener listenforaddestablishmentbutton) {
         addEstablishment.addActionListener(listenforaddestablishmentbutton);
     }
 
-    //execute doInspection method when button is clicked
     public void addInspectionListener(ActionListener listenforinspectionbutton){
         doInspection.addActionListener(listenforinspectionbutton);
     }

@@ -1,10 +1,7 @@
 package controller;
 
-import controller.Message;
-import controller.LoginMessage;
 import model.LoginModel;
 import view.View;
-
 import java.util.concurrent.BlockingQueue;
 
 /**

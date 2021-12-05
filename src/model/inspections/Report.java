@@ -1,12 +1,11 @@
 package model.inspections;
 
+/**
+ * This class is a report that contains all the details of the business and the inspector
+ * conducting the inspection. It is meant to be used as the source of all the data needed
+ * to generate all the other objects of the other classes like the placard for example.
+ */
 public class Report{
-
-
-    //next step is to generate the score from the questionarie and pass it to
-    //variable here
-
-
 
     String EstablishmentName = "no name";
     String Address = " no address";
@@ -19,33 +18,25 @@ public class Report{
     Questionnaire questions;
     Placard placard;
 
-    public Report (String nameOfInspector) {
-        this.EstablishmentName = EstablishmentName;
+    /**
+     * This constructor makes a report with the given inspector and business.
+     * @param nameOfInspector is the name of the inspector doing the inspection.
+     * @param placeName is the name of the business in which the inspection is being made.
+     */
+    public Report (String nameOfInspector,String placeName) {
+
+        this.questions = new Questionnaire();
+        this.EstablishmentName = placeName;
         this.Address = Address;
         this.date = date;
         this.ManagerName = ManagerName;
-        this.inspector = nameOfInspector ;//
+        this.inspector = nameOfInspector ;
         this.notes = notes;
-
-        /**
-         * the following methods makes a questionnaire object, which contains
-         * all the questions. It will also allow the user to answer and record
-         * all the answers in the questionnaire.
-         */
-        this.questions = new Questionnaire();
-        //System.out.println(" this is the score from the report " + questions.getTotalScore());
         this.reportScore = questions.getTotalScore();
 
-        /**
-         * Once a questionnaire is made a report placard will also be made to
-         * display a summary of the inspection results
-         */
-        //this.placard = new Placard();
+
 
 
     }
 
-
-    //need to add methods to edit the data and to filter the access
-    //to report data based on the user role.
 }

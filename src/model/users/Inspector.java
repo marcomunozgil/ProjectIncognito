@@ -8,7 +8,6 @@ import model.inspections.InspectorInspection;
  */
 public class Inspector extends User {
 
-
     private String name = "John Doe";
     private String role = "Inspector";
     private String establishment = "no name";
@@ -20,6 +19,9 @@ public class Inspector extends User {
         return name;
     }
 
+    public String getRole() {
+        return role;
+    }
     /**
      * Able to add an Establishment if it is not listed in the website.
      * @param facility

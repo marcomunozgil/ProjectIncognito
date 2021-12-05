@@ -7,7 +7,7 @@ import model.inspections.Placard;
  */
 public class Establishment {
     private String managerName;
-    private String establishmentName = "McDonald's"; //Sample name
+    private String establishmentName = "McDonald's";
     private String address;
     private boolean status = false; //this boolean will let the user know if the place has been inspected
     private Placard inspectionReport;

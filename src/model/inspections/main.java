@@ -1,7 +1,3 @@
-/*Use this main to test your model.classes or other code
-you added to start debugging or adding features
- */
-
 package model.inspections;
 
 import controller.Controller;
@@ -14,21 +10,19 @@ import model.users.User;
 import view.View;
 import view.dashboard;
 import view.dashboardModel;
-
-import javax.swing.*;
-import java.awt.*;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * this main is intended to be use only to test model.classes and simulate the behavior
- * of the program, but it is not the final main with the MVC coding pattern implemented
+ * of the program. Mainly used for development and debugging of the dashboard and other
+ * associated classes.
  */
 public class main {
 
     public static void main(String[] args) {
-        BlockingQueue<Message> queue = new LinkedBlockingQueue<>();
 
+        BlockingQueue<Message> queue = new LinkedBlockingQueue<>();
         LoginModel model = new LoginModel();
         View view = new View(queue);
         dashboard theView = new dashboard();
@@ -37,7 +31,6 @@ public class main {
 
 
         Controller controller = new Controller(queue, model, view);
-        //theModel.setVisible(true);
         controller.mainLoop();
 
 
@@ -69,16 +62,8 @@ public class main {
          * inspector conducts the inspection in the establishment added by user
          */
         System.out.println("Inspector John has begun an inspection in the new establishment...");
-       // JohnDoe.doInspection(InNout, JohnDoe.getName());
         System.out.println();
         System.out.println();
-
-        //make dashboard button work here
-
-
-
-
-        //System.out.println("End of the program...");
 
 
 

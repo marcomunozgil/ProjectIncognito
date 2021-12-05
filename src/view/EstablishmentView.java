@@ -10,13 +10,11 @@ import java.util.concurrent.BlockingQueue;
  * Class that initializes the Establishment UI/View.
  */
 public class EstablishmentView extends JFrame {
-    //private static BlockingQueue<Message> queue;
     private static JLabel establishmentName;
     private static JLabel managerName;
     private static JLabel address;
 
     public EstablishmentView() {
-        //this.queue = queue;
         JPanel panel = new JPanel();
         JFrame frame = new JFrame();
         frame.setSize(1280, 720);
