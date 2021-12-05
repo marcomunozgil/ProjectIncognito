@@ -4,6 +4,7 @@ import controller.Message;
 import controller.LoginMessage;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.concurrent.BlockingQueue;
 
 /**
@@ -26,38 +27,31 @@ public class View extends JFrame {
     public View(BlockingQueue<Message> queue) {
         this.queue = queue;
 
-        JPanel panel = new JPanel();
-        JFrame frame = new JFrame();
-        frame.setSize(700, 400);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-        frame.add(panel);
+        
 
-        panel.setLayout(null);
+        this.label = new JLabel("Username");
+        this.label.setBounds(10, 20, 80, 25);
+        this.add(label);
 
-        label = new JLabel("Username");
-        label.setBounds(10, 20, 80, 25);
-        panel.add(label);
+        this.userText = new JTextField(10);
+        this.userText.setBounds(100, 20, 165, 25);
+        this.add(userText);
 
-        userText = new JTextField(20);
-        userText.setBounds(100, 20, 165, 25);
-        panel.add(userText);
+        this.passwordLabel = new JLabel("Password");
+        this.passwordLabel.setBounds(10, 50, 80, 25);
+        this.add(passwordLabel);
 
-        passwordLabel = new JLabel("Password");
-        passwordLabel.setBounds(10, 50, 80, 25);
-        panel.add(passwordLabel);
+        this.passwordText = new JTextField(10); //Text field to simplify the test. Password field would usually be used.
+        this.passwordText.setBounds(100, 50, 165, 25);
+        this.add(passwordText);
 
-        passwordText = new JTextField(); //Text field to simplify the test. Password field would usually be used.
-        passwordText.setBounds(100, 50, 165, 25);
-        panel.add(passwordText);
+        this.loginButton = new JButton("Login");
+        this.loginButton.setBounds(10, 80, 80, 25);
+        this.add(loginButton);
 
-        loginButton = new JButton("Login");
-        loginButton.setBounds(10, 80, 80, 25);
-        panel.add(loginButton);
-
-        welcome = new JLabel("Hello! Please enter your username and password.");
-        welcome.setBounds(10,110,700,25);
-        panel.add(welcome);
+        this.welcome = new JLabel("Hello! Please enter your username and password.");
+        this.welcome.setBounds(10,110,700,25);
+        this.add(welcome);
 
         loginButton.addActionListener(e -> {
             String user = userText.getText();
@@ -70,6 +64,11 @@ public class View extends JFrame {
             }
         });
 
+        this.setSize(700, 400);
+        this.setLayout(new FlowLayout());
+        this.setVisible(true);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
     }
 
     /**
@@ -80,8 +79,10 @@ public class View extends JFrame {
     public void updateLoginInfo(String value, String pass) {
         //this.welcome.setText("Welcome " + value + "!"); //Changes the welcome message so that it reflects the username inputted.
         if (value.equals("karen") && pass.equals("password")) {
+            welcome.setText("Welcome back " + value + "! The dashboard window will now open.");
             dashboard db = new dashboard();
             db.setVisible(true);
+            this.setVisible(false);
         } else {
             welcome.setText("Invalid username or password. Please try again.");
         }

@@ -13,9 +13,7 @@ public class App {
 
         LoginModel model = new LoginModel();
         View view = new View(queue);
-        dashboard db = new dashboard();
         Controller controller = new Controller(queue, model, view);
-        db.setVisible(true);
         controller.mainLoop();
     }
 }
