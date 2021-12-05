@@ -2,6 +2,7 @@ package view;
 
 import controller.Message;
 import controller.LoginMessage;
+import model.dashboardControl;
 
 import javax.swing.*;
 import java.awt.*;
@@ -80,8 +81,10 @@ public class View extends JFrame {
         //this.welcome.setText("Welcome " + value + "!"); //Changes the welcome message so that it reflects the username inputted.
         if (value.equals("karen") && pass.equals("password")) {
             welcome.setText("Welcome back " + value + "! The dashboard window will now open.");
-            dashboard db = new dashboard();
-            db.setVisible(true);
+            dashboard theView = new dashboard();
+            dashboardModel theModel = new dashboardModel();
+            dashboardControl dc = new dashboardControl(theView, theModel);
+            theView.setVisible(true);
             this.setVisible(false);
         } else {
             welcome.setText("Invalid username or password. Please try again.");
