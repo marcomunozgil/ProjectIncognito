@@ -1,5 +1,17 @@
 package model.inspections;
 
+import javax.swing.*;
+
+
+/**
+ * The Questionnaire class will present the questions
+ * for the inspector to ask when performing an inspection.
+ * When you press the do Inspection button it will present the
+ * 5 questions; 1 by 1 giving you an option to answer yes or no.
+ * As you answer the questionnaire, the score for the inspection
+ * gets updated. At the end you get to see the placard and the
+ * details of the inspection.
+ */
 public class Questionnaire{
 
     /**
@@ -7,14 +19,12 @@ public class Questionnaire{
      * setters for each field. each field is a
      * question itself of type String.
      */
-    private boolean question1 = true;
-    private boolean question2 = true;
-    private boolean question3 = true;
-    private boolean question4 = true;
-    private boolean question5 = true;
+    private boolean question1 = false;
+    private boolean question2 = false;
+    private boolean question3 = false;
+    private boolean question4 = false;
+    private boolean question5 = false;
     private int totalScore = 0;
-
-
 
     /**
      * each constructor is a question for the inspection
@@ -23,8 +33,26 @@ public class Questionnaire{
      */
     public boolean getQuestion1() {
         String ask1 = "Is the manager present and certified as 'food safety manager'?";
-        System.out.println(ask1); //for debugging purposes
-        //if method only temporaty for debugging until control class is made
+        System.out.println(ask1);
+
+        /**
+         * the next block of code is the GUI for the question, it records the answer and
+         * sets the score depending on the value.
+         */
+        int answer = JOptionPane.showConfirmDialog(null,
+                ask1, "Question 1/5",
+                JOptionPane.YES_NO_OPTION);
+         /**
+         * If the user selects No then set the value of the boolean to false.
+         * Otherwise set the value to true when user selects Yes.
+        */
+        if (answer == JOptionPane.NO_OPTION) {
+            question1 = false;
+
+        } else if(answer == JOptionPane.YES_OPTION) {
+            question1 = true;
+        }
+
         if (question1 == true) {
             totalScore = totalScore + 25;
         }
@@ -44,8 +72,22 @@ public class Questionnaire{
 
     public boolean getQuestion2() {
         String ask2 = "Is the perishable food outside the 'Temperature Danger Zone'?";
-        System.out.println(ask2); //for debugging purposes
-        //if method only temporaty for debugging until control class is made
+        System.out.println(ask2);
+        /**
+         * the next block of code is the GUI for the question, it records the answer and
+         * sets the score depending on the value.
+         */
+        int answer = JOptionPane.showConfirmDialog(null,
+                ask2, "Question 2/5",
+                JOptionPane.YES_NO_OPTION);
+
+        if (answer == JOptionPane.NO_OPTION) {
+            question2 = false;
+        } else if(answer == JOptionPane.YES_OPTION) {
+            question2 = true;
+
+        }
+
         if (question2 == true) {
             totalScore = totalScore + 25;
         }
@@ -61,8 +103,20 @@ public class Questionnaire{
 
     public boolean getQuestion3() {
         String ask3 = "Is there hot and cold water available?";
-        System.out.println(ask3); //for debugging purposes
-        //if method only temporaty for debugging until control class is made
+        System.out.println(ask3);
+        /**
+         * the next block of code is the GUI for the question, it records the answer and
+         * sets the score depending on the value.
+         */
+        int answer = JOptionPane.showConfirmDialog(null,
+                ask3, "Question 3/5",
+                JOptionPane.YES_NO_OPTION);
+
+        if (answer == JOptionPane.NO_OPTION) {
+            question3 = false;
+        } else if(answer == JOptionPane.YES_OPTION) {
+            question3 = true;
+        }
         if (question3 == true) {
             totalScore = totalScore + 20;
         }
@@ -78,8 +132,20 @@ public class Questionnaire{
 
     public boolean getQuestion4() {
         String ask4 = "Are all the hand washing stations stocked and accessible?";
-        System.out.println(ask4); //for debugging purposes
-        //if method only temporaty for debugging until control class is made
+        System.out.println(ask4);
+        /**
+         * the next block of code is the GUI for the question, it records the answer and
+         * sets the score depending on the value.
+         */
+        int answer = JOptionPane.showConfirmDialog(null,
+                ask4, "Question 4/5",
+                JOptionPane.YES_NO_OPTION);
+
+        if (answer == JOptionPane.NO_OPTION) {
+            question4 = false;
+        } else if(answer == JOptionPane.YES_OPTION) {
+            question4 = true;
+        }
         if (question4 == true) {
             totalScore = totalScore + 15;
         }
@@ -95,11 +161,22 @@ public class Questionnaire{
 
     public boolean getQuestion5() {
         String ask5 = "Is every employee wearing gloves and face mask?";
-        System.out.println(ask5); //for debugging purposes
-        //if method only temporaty for debugging until control class is made
+        System.out.println(ask5);
+        /**
+         * the next block of code is the GUI for the question, it records the answer and
+         * sets the score depending on the value.
+         */
+        int answer = JOptionPane.showConfirmDialog(null,
+                ask5, "Question 5/5",
+                JOptionPane.YES_NO_OPTION);
+
+        if (answer == JOptionPane.NO_OPTION) {
+            question5 = false;
+        } else if(answer == JOptionPane.YES_OPTION) {
+            question5 = true;
+        }
         if (question5 == true) {
             totalScore = totalScore + 15;
-            //System.out.println(totalScore);
         }
         return question5;
     }

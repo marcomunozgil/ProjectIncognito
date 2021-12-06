@@ -109,6 +109,7 @@ public class dashboardControl{
         public void actionPerformed (ActionEvent e) {
             try{
                 theModel.doInspection(jonny, bKing);
+
             }
             catch (Exception ex){
                 if(ex instanceof IOException){

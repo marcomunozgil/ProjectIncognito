@@ -22,16 +22,18 @@ public class main {
 
     public static void main(String[] args) {
 
-        BlockingQueue<Message> queue = new LinkedBlockingQueue<>();
-        LoginModel model = new LoginModel();
-        View view = new View(queue);
+        //questionsView qna = new questionsView();
+
+
+       // BlockingQueue<Message> queue = new LinkedBlockingQueue<>();
+       // LoginModel model = new LoginModel();
+       // View view = new View(queue);
         dashboard theView = new dashboard();
         dashboardModel theModel = new dashboardModel();
         dashboardControl dc = new dashboardControl(theView, theModel);
 
-
-        Controller controller = new Controller(queue, model, view);
-        controller.mainLoop();
+        //Controller controller = new Controller(queue, model, view);
+        //controller.mainLoop();
 
 
 

@@ -7,6 +7,4 @@ package model.inspections;
  */
 public class questionsController {
 
-
-
 }
