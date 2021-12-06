@@ -38,5 +38,6 @@ public class dashboardModel {
      */
     public void addEstablishment (User u, Establishment e) {
         u.addEstablishment(e);
+
     }
 }

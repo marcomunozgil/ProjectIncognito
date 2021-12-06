@@ -95,7 +95,7 @@ public class Placard extends Report {
      * @return is the string with the inspector's name.
      */
     public String getInspectorName(){
-        inspectorName = inspector;
+        //inspectorName = inspector;
         return inspector;
     }
 

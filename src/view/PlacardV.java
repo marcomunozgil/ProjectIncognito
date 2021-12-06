@@ -19,10 +19,10 @@ public class PlacardV extends Placard {
          * Constructor for the placard view. This is what the user will see in the
          * screen as the placard.
          * @param colorForPlacard could be yellow, red or green depending on score.
-         * @param inspectorname the name of the inspector performing the inspection.
+         * @param nameOfInspector the name of the inspector performing the inspection.
          * @param scoreNumber the score given to the establishment after inspection.
          */
-        public PlacardGUI(String colorForPlacard, String inspectorname, int scoreNumber, String placeName) {
+        public PlacardGUI(String colorForPlacard, String nameOfInspector, int scoreNumber, String placeName) {
 
             JPanel topTitleArea = new JPanel();
             topTitleArea.setLayout(new BoxLayout(topTitleArea, BoxLayout.PAGE_AXIS));
@@ -30,7 +30,7 @@ public class PlacardV extends Placard {
             JLabel placardTitle = null;
             JLabel placardMessage = new JLabel("   This establishment has been " +
                     "officially inspected by Team Incognito. The overall results are: ");
-            JLabel inspectorName = new JLabel("   Inspected by: " + inspectorname);
+            JLabel inspectorName = new JLabel("   Inspected by: " + nameOfInspector);
             JLabel numericalScore = new JLabel("   Score: " + scoreNumber);
             JLabel establishmentName = new JLabel("   Business Name: " + placeName );
             Font font = new Font("Verdana", Font.BOLD, 25);

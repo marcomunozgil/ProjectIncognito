@@ -8,11 +8,15 @@ import model.inspections.InspectorInspection;
  */
 public class Inspector extends User {
 
-    private String name = "John Doe";
+    private String name = "jonny";
     private String role = "Inspector";
     private String establishment = "no name";
     private InspectorInspection inspection;
     private Establishment facility;
+
+    public void setName(String myString2) {
+        name = myString2;
+    }
 
     public String getName() {
         this.name = name;

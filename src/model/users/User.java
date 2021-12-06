@@ -58,4 +58,7 @@ public class User {
         return role;
     }
 
+    public void setName(String myString2) {
+        name = myString2;
+    }
 }

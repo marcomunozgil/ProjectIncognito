@@ -5,7 +5,7 @@ import model.users.Inspector;
 import view.dashboard;
 import view.dashboardModel;
 
-
+import javax.swing.JTextArea;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -27,6 +27,9 @@ public class dashboardControl{
     private dashboard theView;
     private Inspector jonny ;
     private Establishment bKing;
+    private String myString;
+    private String myString2;
+    public static JTextArea editTextArea = new JTextArea();
 
     /**
      * This method constructs a dashboard object with the given parameters.
@@ -62,12 +65,58 @@ public class dashboardControl{
          * to go ahead and execute the method. This first one is the add Establishment
          * button.
          */
+
         public void actionPerformed (ActionEvent x) {
+
             try {
+                /**
+                 * the next block of code is the GUI for adding an establishment to be inspected
+
+                int answer = JOptionPane.showConfirmDialog(null,
+                        "Please enter the name of the business", "Food Safety Inspections by Incognito",
+                        JTe);
+                /**
+                 * If the user selects No then set the value of the boolean to false.
+                 * Otherwise set the value to true when user selects Yes.
+
+                if (answer == JOptionPane.NO_OPTION) {
+                    question1 = false;
+
+                } else if(answer == JOptionPane.YES_OPTION) {
+                    question1 = true;
+                }*/
+                String result = (String)JOptionPane.showInputDialog(
+                        null,
+                        "Please enter the name of the business:",
+                        "Food safety inspections by incognito 1/2",
+                        JTextField.CENTER
+                );
+                if(result != null && result.length() > 0){
+                    myString = result;
+                }else {
+                    myString = "no name";
+                }
+
+                String result2 = (String)JOptionPane.showInputDialog(
+                        null,
+                        "Please enter the name of the inspector:",
+                        "Food safety inspections by incognito 2/2",
+                        JTextField.CENTER
+                );
+                if(result2 != null && result2.length() > 0){
+                    myString2 = result2;
+                }else {
+                    myString2 = "no name";
+                }
+
                 theModel.addEstablishment(jonny, bKing);
+                bKing.setEstablishment(myString);
+                jonny.setName(myString2);
+
                 JOptionPane.showMessageDialog(null,
-                        bKing.getEstablishment() + "has been added to the list of " +
+                       bKing.getEstablishment() + " has been added to the list of " +
                                 "businesses to inspect. Thanks!");
+
                 System.out.println("Establishment named " + bKing.getEstablishment() + " to the " +
                         "queue of establishments to be inspected by Team Incognito!");
             }
